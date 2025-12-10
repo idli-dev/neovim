@@ -3,7 +3,6 @@ return {
   opts = {},
   dependencies = {
     { "mason-org/mason.nvim", opts = {} },
-    { "j-hui/fidget.nvim",    opts = {} },
     "neovim/nvim-lspconfig",
     "saghen/blink.cmp",
   },

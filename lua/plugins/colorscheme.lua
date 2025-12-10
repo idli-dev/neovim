@@ -52,7 +52,6 @@ return {
           BlinkCmpKindVariable       = { fg = theme.syn.variable },
           BlinkCmpKindClass          = { fg = theme.syn.class },
           BlinkCmpKindModule         = { fg = theme.syn.module },
-          BlinkCmpGhostText          = { fg = theme.ui.fg_dim, italic = true },
 
           -- Telescope
           TelescopeTitle             = { fg = theme.ui.special, bold = true },

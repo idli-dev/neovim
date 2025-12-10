@@ -1,7 +1,7 @@
 local o = vim.opt
 
 o.number = true
-o.relativenumber = true
+-- o.relativenumber = true
 o.signcolumn = "yes"
 
 o.winborder = "single"
@@ -35,7 +35,7 @@ o.autoread = true
 o.undofile = true
 
 o.showmode = false
-o.cmdheight = 0
+o.cmdheight = 1
 
 o.guicursor = "n-c-v:block-nCursor"
 
