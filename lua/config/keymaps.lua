@@ -3,4 +3,4 @@ vim.g.maplocalleader = " "
 
 local map = vim.keymap.set
 
-map("n","<Esc><Esc>", ":nohlsearch<CR>")
+map("n","<esc>", ":nohlsearch<CR>", { desc = "No highlight"})

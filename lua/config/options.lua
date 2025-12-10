@@ -4,9 +4,14 @@ o.number = true
 o.relativenumber = true
 o.signcolumn = "yes"
 
+o.winborder = "single"
+
 o.scrolloff = 10
 o.sidescrolloff = 10
 o.smoothscroll = true
+
+o.cursorline = true
+o.cursorlineopt = "number"
 
 o.background = "dark"
 o.termguicolors = true
