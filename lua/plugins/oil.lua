@@ -1,11 +1,11 @@
 return {
-  'stevearc/oil.nvim',
+  "stevearc/oil.nvim",
   ---@module 'oil'
   ---@type oil.SetupOpts
   dependencies = { { "nvim-mini/mini.icons", opts = {} } },
   lazy = false,
   keys = {
-    { "<leader>e", ":Oil --float<CR>", desc = "Open Oil File Explorer" }
+    { "<leader>e", ":Oil --float<CR>", desc = "Open Oil File Explorer" },
   },
   config = function()
     require("oil").setup({
@@ -22,7 +22,6 @@ return {
         padding = 2,
         border = nil,
       },
-
     })
-  end
+  end,
 }

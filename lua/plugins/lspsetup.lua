@@ -4,6 +4,7 @@ return {
   dependencies = {
     { "mason-org/mason.nvim", opts = {} },
     "neovim/nvim-lspconfig",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     "saghen/blink.cmp",
   },
   config = function()
@@ -12,6 +13,15 @@ return {
     mason_lsp.setup({
       ensure_installed = { "emmylua_ls" },
       automatic_enable = true,
+    })
+
+    require("mason-tool-installer").setup({
+      ensure_installed = {
+        { "bash-language-server", auto_update = true },
+        "stylua",
+      },
+      auto_update = false,
+      run_on_start = true,
     })
 
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -41,7 +51,7 @@ return {
         -- Hover & Diagnostics
         map("n", "K", function()
           local options = { scope = "cursor", border = "single", max_width = 80 }
-          local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line('.') - 1 })
+          local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })
 
           if diagnostics and #diagnostics > 0 then
             vim.diagnostic.open_float(nil, options)

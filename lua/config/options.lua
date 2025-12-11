@@ -39,7 +39,7 @@ o.cmdheight = 1
 
 o.guicursor = "n-c-v:block-nCursor"
 
-o.foldmethod = "indent"  -- or "expr"
+o.foldmethod = "indent" -- or "expr"
 o.foldlevel = 99
 o.hidden = true
 o.timeoutlen = 500
@@ -51,3 +51,11 @@ o.inccommand = "split"
 
 o.pumheight = 10
 o.pumwidth = 0
+
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
+	end,
+})
